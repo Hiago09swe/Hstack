@@ -59,7 +59,7 @@ export function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm text-slate-300 transition-colors hover:text-white"
+                className="text-sm text-neutral-300 transition-colors hover:text-white"
               >
                 {l.label}
               </a>
@@ -72,13 +72,13 @@ export function Navbar() {
             href={whatsappLink("Olá! Vim pelo site da HStack e quero saber mais.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full bg-gradient-to-r from-sky-400 to-indigo-500 px-5 py-2 text-sm font-semibold text-ink transition-transform hover:scale-105 sm:inline-block"
+            className="hidden rounded-full bg-white hover:bg-neutral-200 px-5 py-2 text-sm font-semibold text-ink transition-transform hover:scale-105 sm:inline-block"
           >
             Falar no WhatsApp
           </a>
           <button
             type="button"
-            className="rounded-lg p-2 text-slate-200 md:hidden"
+            className="rounded-lg p-2 text-neutral-200 md:hidden"
             aria-expanded={open}
             aria-controls="menu-mobile"
             aria-label={open ? "Fechar menu" : "Abrir menu"}
@@ -99,7 +99,7 @@ export function Navbar() {
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5"
+                  className="block rounded-lg px-3 py-3 text-neutral-200 hover:bg-white/5"
                 >
                   {l.label}
                 </a>
@@ -110,7 +110,7 @@ export function Navbar() {
                 href={whatsappLink("Olá! Vim pelo site da HStack e quero saber mais.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block rounded-full bg-gradient-to-r from-sky-400 to-indigo-500 px-5 py-3 text-center font-semibold text-ink"
+                className="block rounded-full bg-white hover:bg-neutral-200 px-5 py-3 text-center font-semibold text-ink"
               >
                 Falar no WhatsApp
               </a>

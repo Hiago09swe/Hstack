@@ -56,10 +56,10 @@ export function CookieBanner() {
       <h2 id="cookie-title" className="text-base font-semibold text-white">
         Sua privacidade importa
       </h2>
-      <p className="mt-1.5 text-sm leading-relaxed text-slate-300">
+      <p className="mt-1.5 text-sm leading-relaxed text-neutral-300">
         Usamos cookies essenciais para o site funcionar e, com sua permissão, cookies de análise e
         marketing. Saiba mais na{" "}
-        <Link href="/privacidade" className="text-sky-300 underline underline-offset-2">
+        <Link href="/privacidade" className="text-white underline underline-offset-2">
           Política de Privacidade
         </Link>
         .
@@ -68,26 +68,26 @@ export function CookieBanner() {
       {custom && (
         <fieldset className="mt-4 space-y-3">
           <legend className="sr-only">Preferências de cookies</legend>
-          <label className="flex items-center justify-between gap-3 text-sm text-slate-200">
+          <label className="flex items-center justify-between gap-3 text-sm text-neutral-200">
             <span>Necessários (sempre ativos)</span>
-            <input type="checkbox" checked disabled className="h-4 w-4 accent-sky-400" />
+            <input type="checkbox" checked disabled className="h-4 w-4 accent-white" />
           </label>
-          <label className="flex items-center justify-between gap-3 text-sm text-slate-200">
+          <label className="flex items-center justify-between gap-3 text-sm text-neutral-200">
             <span>Análise e desempenho</span>
             <input
               type="checkbox"
               checked={analytics}
               onChange={(e) => setAnalytics(e.target.checked)}
-              className="h-4 w-4 accent-sky-400"
+              className="h-4 w-4 accent-white"
             />
           </label>
-          <label className="flex items-center justify-between gap-3 text-sm text-slate-200">
+          <label className="flex items-center justify-between gap-3 text-sm text-neutral-200">
             <span>Marketing</span>
             <input
               type="checkbox"
               checked={marketing}
               onChange={(e) => setMarketing(e.target.checked)}
-              className="h-4 w-4 accent-sky-400"
+              className="h-4 w-4 accent-white"
             />
           </label>
         </fieldset>
@@ -97,7 +97,7 @@ export function CookieBanner() {
         <button
           type="button"
           onClick={() => finish(true, true)}
-          className="rounded-full bg-gradient-to-r from-sky-400 to-indigo-500 px-4 py-2 text-sm font-semibold text-ink"
+          className="rounded-full bg-white hover:bg-neutral-200 px-4 py-2 text-sm font-semibold text-ink"
         >
           Aceitar todos
         </button>
@@ -121,7 +121,7 @@ export function CookieBanner() {
         <button
           type="button"
           onClick={() => finish(false, false)}
-          className="rounded-full px-4 py-2 text-sm text-slate-300 hover:text-white"
+          className="rounded-full px-4 py-2 text-sm text-neutral-300 hover:text-white"
         >
           Somente necessários
         </button>

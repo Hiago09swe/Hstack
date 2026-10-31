@@ -8,12 +8,12 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <Logo />
-          <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">{SITE.description}</p>
+          <p className="mt-4 max-w-sm text-sm leading-relaxed text-neutral-400">{SITE.description}</p>
         </div>
 
         <div>
           <h3 className="text-sm font-semibold text-white">Navegação</h3>
-          <ul className="mt-4 space-y-2.5 text-sm text-slate-400">
+          <ul className="mt-4 space-y-2.5 text-sm text-neutral-400">
             <li><a className="hover:text-white" href="#servicos">Serviços</a></li>
             <li><a className="hover:text-white" href="#processo">Como funciona</a></li>
             <li><a className="hover:text-white" href="#planos">Planos</a></li>
@@ -23,7 +23,7 @@ export function Footer() {
 
         <div>
           <h3 className="text-sm font-semibold text-white">Contato e legal</h3>
-          <ul className="mt-4 space-y-2.5 text-sm text-slate-400">
+          <ul className="mt-4 space-y-2.5 text-sm text-neutral-400">
             <li>
               <a
                 className="hover:text-white"
@@ -40,7 +40,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 py-5 text-center text-xs text-slate-500">
+      <div className="border-t border-white/10 py-5 text-center text-xs text-neutral-500">
         © {new Date().getFullYear()} HStack. Todos os direitos reservados.
       </div>
     </footer>

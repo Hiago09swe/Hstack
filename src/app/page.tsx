@@ -69,13 +69,13 @@ export default function Home() {
       {/* HERO */}
       <section id="topo" className="relative isolate overflow-hidden pt-32 pb-24 sm:pt-44 sm:pb-36">
         <div className="grid-bg absolute inset-0 -z-10" aria-hidden="true" />
-        <Parallax speed={0.18} className="absolute left-1/2 top-0 -z-10 -translate-x-1/2">
-          <div className="h-[460px] w-[760px] rounded-full bg-gradient-to-br from-sky-500/30 via-indigo-500/20 to-fuchsia-500/20 blur-3xl" />
+        <Parallax speed={0.18} className="absolute left-1/2 top-0 -z-10 -tranneutral-x-1/2">
+          <div className="h-[460px] w-[760px] rounded-full bg-gradient-to-br from-white/20 via-neutral-400/10 to-neutral-600/10 blur-3xl" />
         </Parallax>
 
         <div className="mx-auto max-w-4xl px-5 text-center">
           <Reveal>
-            <span className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-sky-300">
+            <span className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-white">
               Tecnologia · Automação · Engenharia de Software
             </span>
           </Reveal>
@@ -85,7 +85,7 @@ export default function Home() {
             </h1>
           </Reveal>
           <Reveal delay={200}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-neutral-300">
               A HStack automatiza processos e constrói software sob medida para empresários que querem
               mais vendas, menos trabalho manual e uma operação que escala.
             </p>
@@ -96,7 +96,7 @@ export default function Home() {
                 href={cta}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full bg-gradient-to-r from-sky-400 to-indigo-500 px-8 py-3.5 font-semibold text-ink transition-transform hover:scale-105"
+                className="rounded-full bg-white hover:bg-neutral-200 px-8 py-3.5 font-semibold text-ink transition-transform hover:scale-105"
               >
                 Quero falar no WhatsApp
               </a>
@@ -112,7 +112,7 @@ export default function Home() {
       <section id="servicos" className="mx-auto max-w-6xl px-5 py-24">
         <Reveal>
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">O que a HStack constrói para você</h2>
-          <p className="mt-3 max-w-2xl text-slate-400">
+          <p className="mt-3 max-w-2xl text-neutral-400">
             Soluções pensadas para um objetivo: colocar a tecnologia a serviço do seu faturamento.
           </p>
         </Reveal>
@@ -120,11 +120,11 @@ export default function Home() {
           {SERVICES.map((s, i) => (
             <Reveal key={s.title} delay={i * 90}>
               <article className="card h-full rounded-2xl p-7">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-400/10 text-sky-300">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white">
                   <Icon d={s.icon} />
                 </div>
                 <h3 className="mt-5 text-xl font-semibold text-white">{s.title}</h3>
-                <p className="mt-2 leading-relaxed text-slate-400">{s.text}</p>
+                <p className="mt-2 leading-relaxed text-neutral-400">{s.text}</p>
               </article>
             </Reveal>
           ))}
@@ -136,7 +136,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-5">
           <Reveal>
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Como funciona</h2>
-            <p className="mt-3 max-w-2xl text-slate-400">Um caminho simples, do primeiro contato ao resultado.</p>
+            <p className="mt-3 max-w-2xl text-neutral-400">Um caminho simples, do primeiro contato ao resultado.</p>
           </Reveal>
           <div className="mt-12 grid gap-5 md:grid-cols-4">
             {STEPS.map((s, i) => (
@@ -144,7 +144,7 @@ export default function Home() {
                 <div className="card h-full rounded-2xl p-6">
                   <span className="text-gradient text-3xl font-bold">{s.n}</span>
                   <h3 className="mt-3 text-lg font-semibold text-white">{s.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{s.text}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-neutral-400">{s.text}</p>
                 </div>
               </Reveal>
             ))}
@@ -156,7 +156,7 @@ export default function Home() {
       <section id="planos" className="mx-auto max-w-6xl px-5 py-24">
         <Reveal>
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Formas de trabalhar juntos</h2>
-          <p className="mt-3 max-w-2xl text-slate-400">
+          <p className="mt-3 max-w-2xl text-neutral-400">
             Cada empresa é diferente. Os valores são definidos após uma conversa sobre o seu cenário.
           </p>
         </Reveal>
@@ -165,18 +165,18 @@ export default function Home() {
             <Reveal key={p.name} delay={i * 100}>
               <article
                 className={`card relative flex h-full flex-col rounded-2xl p-8 ${
-                  p.featured ? "!border-sky-400/50 bg-sky-400/[0.04]" : ""
+                  p.featured ? "!border-white/40 bg-white/[0.04]" : ""
                 }`}
               >
-                <span className={`text-xs font-semibold uppercase tracking-wider ${p.featured ? "text-sky-300" : "text-slate-500"}`}>
+                <span className={`text-xs font-semibold uppercase tracking-wider ${p.featured ? "text-white" : "text-neutral-500"}`}>
                   {p.tag}
                 </span>
                 <h3 className="mt-2 text-2xl font-semibold text-white">{p.name}</h3>
-                <p className="mt-1 text-sm text-slate-400">Sob consulta</p>
-                <ul className="mt-6 flex-1 space-y-3 text-sm text-slate-300">
+                <p className="mt-1 text-sm text-neutral-400">Sob consulta</p>
+                <ul className="mt-6 flex-1 space-y-3 text-sm text-neutral-300">
                   {p.items.map((item) => (
                     <li key={item} className="flex gap-2.5">
-                      <span className="mt-0.5 text-sky-300" aria-hidden="true">✓</span>
+                      <span className="mt-0.5 text-white" aria-hidden="true">✓</span>
                       {item}
                     </li>
                   ))}
@@ -187,7 +187,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className={`mt-8 rounded-full px-6 py-3 text-center font-semibold transition-transform hover:scale-[1.03] ${
                     p.featured
-                      ? "bg-gradient-to-r from-sky-400 to-indigo-500 text-ink"
+                      ? "bg-white hover:bg-neutral-200 text-ink"
                       : "border border-white/15 text-white hover:bg-white/5"
                   }`}
                 >
@@ -202,11 +202,11 @@ export default function Home() {
       {/* CONTATO */}
       <section id="contato" className="px-5 pb-24">
         <Reveal>
-          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-sky-500/15 via-indigo-500/10 to-fuchsia-500/10 p-10 text-center sm:p-16">
+          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-white/[0.02] p-10 text-center sm:p-16">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Vamos colocar a tecnologia para vender por você?
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-slate-300">
+            <p className="mx-auto mt-4 max-w-xl text-neutral-300">
               Fale direto com o Hiago no WhatsApp. Sem formulário, sem burocracia: uma conversa para entender
               seu negócio e mostrar o que dá para automatizar.
             </p>
@@ -214,7 +214,7 @@ export default function Home() {
               href={cta}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-block rounded-full bg-gradient-to-r from-sky-400 to-indigo-500 px-9 py-4 font-semibold text-ink transition-transform hover:scale-105"
+              className="mt-8 inline-block rounded-full bg-white hover:bg-neutral-200 px-9 py-4 font-semibold text-ink transition-transform hover:scale-105"
             >
               Chamar no WhatsApp
             </a>
