@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  background: #05070b;
+}
+
+body {
+  background: #05070b;
+  color: #e6e9ef;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.35);
+}
+
+/* Foco visível (WCAG) */
+:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Fade up ao rolar */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Fundo em grade sutil */
+.grid-bg {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #38bdf8, #818cf8 60%, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 18px 50px -20px rgba(56, 189, 248, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .card,
+  .card:hover {
+    transition: none;
+    transform: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+  }
+}
